@@ -1,21 +1,12 @@
-Given(/^I am on the homepage$/) do
-  visit root_path
+When(/^I click "(.*?)"$/) do |button|
+  click_link button
 end
 
-Then(/^I should see description of the apps$/) do
-  message = 'logged into'
-  expect(page).to have_content(message)
+Then(/^I should see the sign up page$/) do
+  expect(page).to have_content("Sign Up")
+  expect(page).to have_content("Username")
+  expect(page).to have_content("Password")
 end
-
-# When(/^I click "(.*?)"$/) do |button|
-#   click_link button
-# end
-
-# Then(/^I should see the sign up page$/) do
-#   expect(page).to have_content("Sign Up")
-#   expect(page).to have_content("Username")
-#   expect(page).to have_content("Password")
-# end
 
 # Given(/^I am a registered user$/) do
 # visit new_user_path

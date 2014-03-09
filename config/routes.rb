@@ -1,5 +1,9 @@
 Week10Test::Application.routes.draw do
 
+  get 'users/new' => 'users#new', as: :new_user
+  post "users" => 'users#create'
+
+  root 'counter#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
