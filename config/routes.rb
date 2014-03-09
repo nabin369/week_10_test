@@ -3,6 +3,7 @@ Week10Test::Application.routes.draw do
   get 'sessions/new' => 'sessions#new', as: :new_session
   post 'sessions/new' => 'sessions#create'
 
+  get 'users/show' => 'users#show', as: :show_user
   get 'users/new' => 'users#new', as: :new_user
   post "users" => 'users#create'
 

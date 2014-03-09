@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   	if @user.save
   		flash[:success] = " You have successfully singed up"
-  		redirect_to root_path
+  		redirect_to show_user_path
   	else
   		render new_user_path
   	end
