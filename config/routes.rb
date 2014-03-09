@@ -1,4 +1,7 @@
 Week10Test::Application.routes.draw do
+  get 'sessions/destroy' => 'sessions#destroy', as: :signout
+  get 'sessions/new' => 'sessions#new', as: :new_session
+  post 'sessions/new' => 'sessions#create'
 
   get 'users/new' => 'users#new', as: :new_user
   post "users" => 'users#create'
