@@ -5,17 +5,20 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
   <%= render 'layouts/shim' %>
 </head>
 <body>
 
-<%= render 'layouts/header' %>
+	<%= render 'layouts/header' %>
 
-<% flash.each do |index, value| %>
-	<%= value %>
-<% end %>
+	<% flash.each do |index, value| %>
+		<%= value %>
+	<% end %>
 
-<%= yield %>
+  <div id="container">
+  <%= yield %>
+  </div>
 
 </body>
 </html>

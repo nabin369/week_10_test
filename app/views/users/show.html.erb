@@ -1,5 +1,17 @@
 <div class="center">
-	<h1>Hello</h1>
+
+	<h1>User:
+		<%= current_user.username %>
+	</h1>
+	<h3>So far, you've logged into
+		<%= current_user.sign_in_count %>
+
+		<% if current_user.sign_in_count == 1 %>
+			time
+		<% else %>
+			times
+		<% end %>
+	</h3>
+
 
 </div>
-

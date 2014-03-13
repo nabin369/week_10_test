@@ -7,10 +7,16 @@ class User < ActiveRecord::Base
 
 	before_save :create_remember_token
 
+	def count
+		increment! :sign_in_count
+	end
+
 	private
 
 	def create_remember_token
 		self.remember_token = SecureRandom.urlsafe_base64
 	end
+
+
 
 end

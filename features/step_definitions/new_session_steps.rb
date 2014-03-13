@@ -22,7 +22,7 @@ end
 
 When(/^I fill up with incorrect data$/) do
   fill_in 'session[username]', with: 'test'
-  fill_in 'session[password]', with: 'testing'
+  fill_in 'session[password]', with: 'testingtest'
   click_button "Sign In"
 end
 
@@ -35,6 +35,7 @@ Then(/^I should be on the sign in page$/) do
 end
 
 When(/^I fill up with correct data$/) do
+  visit new_session_path
   fill_in 'session[username]', with: 'test'
   fill_in 'session[password]', with: 'testingtest'
   click_button "Sign In"

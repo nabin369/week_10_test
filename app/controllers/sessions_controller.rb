@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
 		@user = User.find_by_username(params[:session][:username])
 
 		if @user && @user.authenticate(params[:session][:password])
+			@user.count
 			sign_in @user
+
 			flash[:success] = "Welcome #{@user.username.capitalize}"
 			redirect_to show_user_path
 		else
@@ -14,6 +16,10 @@ class SessionsController < ApplicationController
 
 			render new_session_path
 		end
+	end
+
+	def show
+		@user = User.find(params[:id])
 	end
 
 	def destroy
