@@ -16,7 +16,24 @@
 //= require_tree .
 
 
+
+
 $(document).ready(function(){
 	signup();
 
 });
+
+function signup(){
+  $('.signup').click(function(event) {
+  	var name = $('#user_username').val();
+  	var password = $('#user_password').val();
+  	var password_confirmation = $('#user_password_confirmation').val();
+    $.post("/users", {user[username]: name, user[password]: password, user[password_confirmation]: password_confirmation});
+    	console.log(name);
+    });
+  });
+
+
+}
+
+

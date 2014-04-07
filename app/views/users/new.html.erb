@@ -2,7 +2,7 @@
 	<div class="span6 offset4">
 		<h1>Sign Up</h1>
 
-			<%= form_for(@user) do |f| %>
+			<%= form_for(@user, :remote => true) do |f| %>
 				<%= render 'shared/error_message' %>
 					<%= f.label :username %>
 					<%= f.text_field :username %><br>
@@ -13,8 +13,8 @@
 					<%= f.label :password_confirmation %>
 					<%= f.password_field :password_confirmation %><br>
 
-				<%= f.submit "Create Account", class: "btn btn-large 		btn-primary" %>
-
+				<%= f.submit "Create Account", class: "signup btn btn-large btn-primary" %>
 			<% end %>
+
 	</div>
 </div>
