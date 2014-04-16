@@ -24,3 +24,5 @@ Implementation:
 * Validate your CSS with http://jigsaw.w3.org/css-validator/. Try to fix the errors it may show
 * Validate your JS with http://www.jslint.com/. Try to fix the errors it may show
 * Finally, make your app look good. It's just a couple of pages with the most basic functionality. Make an attempt at web design but don't overcomplicate it
+
+
